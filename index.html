@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real Madrid CF — World-class football platform inspired by Real Madrid's royal identity, European heritage, and the Santiago Bernabéu. 15 European Cups, 36 La Ligas.">
+  <meta name="theme-color" content="#071A36">
+  <title>Real Madrid CF — The Royal Crown of World Football | Unofficial Tribute</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800&family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/stadium.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/real-madrid-crest.svg">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. GLOBAL STICKY HEADER
+       ======================================================================== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-link" aria-label="Real Madrid Home">
+        <img src="assets/images/real-madrid-crest.svg" alt="Real Madrid CF Crest" class="brand-crest">
+        <div class="brand-text">
+          <span class="brand-title">REAL MADRID</span>
+          <span class="brand-tagline">Club de Fútbol • 1902</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#first-team" class="nav-link">First Team</a>
+        <a href="#matches" class="nav-link">Matches</a>
+        <a href="#trophies" class="nav-link">Trophies</a>
+        <a href="#history" class="nav-link">History</a>
+        <a href="#legends" class="nav-link">Legends</a>
+        <a href="#stadium" class="nav-link">Bernabéu</a>
+        <a href="#news" class="nav-link">Editorial</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Interactive Audio Toggle (Ambient Stadium Chants & Brass) -->
+        <button class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Toggle Bernabéu Matchday Atmosphere Audio">
+          <div class="audio-waves" id="audio-waves">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="audio-lbl">Matchday Sound</span>
+        </button>
+
+        <!-- Language Selector -->
+        <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Switch Language (ES / EN)">
+          ES
+        </button>
+
+        <!-- Official Tickets CTA -->
+        <a href="#matches" class="header-ticket-btn" onclick="window.notifyToast('Directing to Santiago Bernabéu Ticketing & VIP Hospitality...')">
+          <span>Tickets</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-nav-header">
+        <div class="brand-link">
+          <img src="assets/images/real-madrid-crest.svg" alt="Real Madrid Crest" style="width: 38px; height: 38px;">
+          <span class="brand-title" style="font-size: 1.1rem;">REAL MADRID</span>
+        </div>
+        <button class="mobile-close-btn" id="mobile-nav-close" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#first-team" class="mobile-nav-link">First Team</a></li>
+        <li><a href="#matches" class="mobile-nav-link">Matches &amp; Fixtures</a></li>
+        <li><a href="#trophies" class="mobile-nav-link">Sala de Trofeos</a></li>
+        <li><a href="#history" class="mobile-nav-link">Club History</a></li>
+        <li><a href="#legends" class="mobile-nav-link">Leyendas Blancas</a></li>
+        <li><a href="#stadium" class="mobile-nav-link">Santiago Bernabéu</a></li>
+        <li><a href="#news" class="mobile-nav-link">Editorial &amp; News</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Photo Gallery</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-footer">
+      <p style="font-size: 0.85rem; color: var(--color-slate-400); margin-bottom: 0.75rem;">
+        <em>¡Hala Madrid! ...y nada más</em>
+      </p>
+      <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="window.notifyToast('Connecting to Bernabéu Pass...')">
+        Bernabéu Tickets
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       2. CINEMATIC HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="hero" aria-label="Real Madrid Cinematic Atmosphere">
+    <div class="hero-backdrop"></div>
+    <div class="hero-spotlight"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge-tag">
+        <svg class="crown-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+        </svg>
+        <span>FIFA Best Club of the 20th Century</span>
+      </div>
+
+      <h1 class="hero-headline">
+        REINADO ETERNO.
+        <span class="text-gold">THE CROWN OF EUROPE</span>
+      </h1>
+
+      <p class="hero-lead">
+        Fifteen European Cups. Thirty-six La Liga crowns. A century and a quarter of pure sporting majesty at the <em>Estadio Santiago Bernabéu</em>. Where football history isn't merely remembered—it is relentlessly forged.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#first-team" class="btn-primary">
+          <span>Explore First Team</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#trophies" class="btn-secondary">
+          <span>Sala de Trofeos (15 UCL)</span>
+        </a>
+        <a href="#stadium" class="btn-secondary">
+          <span>El Nuevo Bernabéu</span>
+        </a>
+      </div>
+
+      <!-- Live Matchday Ticker & Countdown -->
+      <div class="hero-match-ticker">
+        <div class="ticker-fixture">
+          <div class="ticker-pulse"></div>
+          <div>
+            <div class="ticker-match-name">NEXT MATCH: REAL MADRID vs FC BARCELONA</div>
+            <div class="ticker-match-venue">El Clásico • Santiago Bernabéu • 21:00 CET</div>
+          </div>
+        </div>
+        <div class="ticker-countdown">
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-days">03</span>
+            <span class="countdown-lbl">Days</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-hours">09</span>
+            <span class="countdown-lbl">Hours</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-mins">41</span>
+            <span class="countdown-lbl">Mins</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-secs">20</span>
+            <span class="countdown-lbl">Secs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Club Statistics Banner Ribbon -->
+      <div class="hero-stat-banner">
+        <div class="stat-item">
+          <div class="stat-counter-number" data-target="15">15</div>
+          <div class="stat-label-title">European Cups</div>
+          <div class="stat-subtext">La Decimoquinta (1956–2024)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-counter-number" data-target="36">36</div>
+          <div class="stat-label-title">La Liga Titles</div>
+          <div class="stat-subtext">All-Time Spanish Champions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-counter-number" data-target="104">104<span class="gold-plus">+</span></div>
+          <div class="stat-label-title">Official Trophies</div>
+          <div class="stat-subtext">World Record Trophy Haul</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-counter-number">84.7K</div>
+          <div class="stat-label-title">Bernabéu Capacity</div>
+          <div class="stat-subtext">360° Halo &amp; Hypogeum Pitch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. MARQUEE BANNER
+       ======================================================================== -->
+  <aside class="marquee-strip" aria-label="Club Motto Marquee">
+    <div class="marquee-content">
+      <div class="marquee-item"><span class="gold-star">★</span> ¡HALA MADRID! ...Y NADA MÁS</div>
+      <div class="marquee-item"><span class="gold-star">★</span> 15x UEFA CHAMPIONS LEAGUE KINGS</div>
+      <div class="marquee-item"><span class="gold-star">★</span> HISTORIA QUE TÚ HICISTE, HISTORIA POR HACER</div>
+      <div class="marquee-item"><span class="gold-star">★</span> 36x LA LIGA CHAMPIONS</div>
+      <div class="marquee-item"><span class="gold-star">★</span> FIFA CLUB OF THE CENTURY</div>
+      <div class="marquee-item"><span class="gold-star">★</span> EL NUEVO SANTIAGO BERNABÉU</div>
+      <div class="marquee-item"><span class="gold-star">★</span> ¡HALA MADRID! ...Y NADA MÁS</div>
+      <div class="marquee-item"><span class="gold-star">★</span> 15x UEFA CHAMPIONS LEAGUE KINGS</div>
+      <div class="marquee-item"><span class="gold-star">★</span> HISTORIA QUE TÚ HICISTE, HISTORIA POR HACER</div>
+      <div class="marquee-item"><span class="gold-star">★</span> 36x LA LIGA CHAMPIONS</div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       4. FIRST TEAM SQUAD SECTION
+       ======================================================================== -->
+  <section class="section" id="first-team">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-kicker">Plantilla Primer Equipo</span>
+        <h2 class="section-title">The Royal Madrid Squad</h2>
+        <p class="section-description">
+          European champions and world-class generational talents united in the pursuit of perfection under Carlo Ancelotti. Select any player to inspect their tactical dossier.
+        </p>
+      </header>
+
+      <!-- Position Filters -->
+      <div class="filter-bar" role="tablist" aria-label="Squad Position Filters">
+        <button class="filter-btn squad-filter-btn active" data-filter="all" role="tab" aria-selected="true">All Squad</button>
+        <button class="filter-btn squad-filter-btn" data-filter="forward" role="tab" aria-selected="false">Forwards</button>
+        <button class="filter-btn squad-filter-btn" data-filter="midfielder" role="tab" aria-selected="false">Midfielders</button>
+        <button class="filter-btn squad-filter-btn" data-filter="defender" role="tab" aria-selected="false">Defenders</button>
+        <button class="filter-btn squad-filter-btn" data-filter="goalkeeper" role="tab" aria-selected="false">Goalkeepers</button>
+        <button class="filter-btn squad-filter-btn" data-filter="staff" role="tab" aria-selected="false">Coaching Staff</button>
+      </div>
+
+      <!-- Squad Dynamic Cards Grid -->
+      <div class="squad-grid" id="squad-grid" aria-live="polite">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. MATCHES & FIXTURES SECTION
+       ======================================================================== -->
+  <section class="section" id="matches" style="background: linear-gradient(180deg, var(--color-navy-midnight) 0%, #05142B 50%, var(--color-navy-midnight) 100%);">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-kicker">Centro de Partidos</span>
+        <h2 class="section-title">Fixtures &amp; Match Reports</h2>
+        <p class="section-description">
+          Verified match results, European knockout nights, upcoming La Liga fixtures, and Santiago Bernabéu ticketing schedules.
+        </p>
+      </header>
+
+      <div class="match-tabs" role="tablist">
+        <button class="match-tab-btn active" data-tab="upcoming" role="tab" aria-selected="true">Upcoming Fixtures</button>
+        <button class="match-tab-btn" data-tab="recent" role="tab" aria-selected="false">Recent Results &amp; Reports</button>
+      </div>
+
+      <!-- Upcoming Matches Grid -->
+      <div class="matches-grid" id="upcoming-matches-list">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+
+      <!-- Recent Matches Grid -->
+      <div class="matches-grid" id="recent-matches-list" style="display: none;">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. TROPHIES AND HONOURS (SALA DE TROFEOS)
+       ======================================================================== -->
+  <section class="section" id="trophies">
+    <div class="container">
+      <header class="section-header centered">
+        <span class="section-kicker">Sala de Trofeos</span>
+        <h2 class="section-title">The Royal Trophy Cabinet</h2>
+        <p class="section-description">
+          104 official trophies. 15 European Cups. Explore the greatest winning tradition in global sport, spanning from Paris in 1956 to London in 2024.
+        </p>
+      </header>
+
+      <div class="trophies-cabinet-grid" id="trophies-cabinet-grid">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. CLUB HISTORY SECTION (1902 - PRESENT)
+       ======================================================================== -->
+  <section class="section" id="history" style="background: linear-gradient(180deg, var(--color-navy-midnight) 0%, #061833 50%, var(--color-navy-midnight) 100%);">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-kicker">El Legado Blanco</span>
+        <h2 class="section-title">122 Years of Sporting Royalty</h2>
+        <p class="section-description">
+          An editorial journey through the defining eras: from the foundation by the Padrós brothers in 1902 to the modern cathedral of football.
+        </p>
+      </header>
+
+      <!-- Horizontal Era Navigation -->
+      <div class="history-era-nav" id="history-era-nav">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+
+      <!-- Dynamic Era Display -->
+      <div id="history-era-display">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. LEGENDS SECTION (LEYENDAS BLANCAS)
+       ======================================================================== -->
+  <section class="section" id="legends">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-kicker">Leyendas Inmortales</span>
+        <h2 class="section-title">The Pantheon of White Legends</h2>
+        <p class="section-description">
+          The giants whose character, genius, and insatiable appetite for triumph established Real Madrid as the benchmark of football nobility.
+        </p>
+      </header>
+
+      <div class="legends-grid" id="legends-grid">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. STADIUM EXPERIENCE (EL NUEVO SANTIAGO BERNABÉU)
+       ======================================================================== -->
+  <section class="section stadium-section" id="stadium">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-kicker">Arquitectura e Innovación</span>
+        <h2 class="section-title">El Nuevo Santiago Bernabéu</h2>
+        <p class="section-description">
+          The most technologically advanced stadium in world sport. Featuring a subterranean greenhouse cave 30 meters beneath the pitch, a 360-degree halo video board, and a motorized retractable roof.
+        </p>
+      </header>
+
+      <div class="stadium-blueprint-grid">
+        <!-- Left: Architectural Schematic SVG -->
+        <div class="schematic-viewport">
+          <span class="schematic-corner-tag">BERNABÉU SCHEMATIC // REV. 2024</span>
+          <img src="assets/images/stadium-schematic.svg" alt="Santiago Bernabéu Cross-Section Architectural Schematic">
+        </div>
+
+        <!-- Right: Interactive Feature Explorer -->
+        <div class="stadium-tech-controls">
+          <div class="stadium-features-list" id="stadium-features-list">
+            <!-- Rendered dynamically by components.js -->
+          </div>
+          <div class="stadium-feature-details" id="stadium-feature-details">
+            <!-- Active feature detailed specs -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Bernabéu Tour Banner -->
+      <div class="stadium-tour-banner">
+        <div class="tour-banner-content">
+          <h3>Tour Bernabéu &amp; VIP Museum Experience</h3>
+          <p>
+            Walk through the player tunnel, touch the grass, visit the presidential box, and admire the 15 UEFA Champions League trophies up close in Madrid.
+          </p>
+        </div>
+        <button class="btn-primary" onclick="window.notifyToast('Tour Bernabéu Reservation: Selecting tour schedule...')">
+          Book Stadium Tour
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. NEWS & EDITORIAL SECTION
+       ======================================================================== -->
+  <section class="section" id="news" style="background: linear-gradient(180deg, var(--color-navy-midnight) 0%, #05152C 50%, var(--color-navy-midnight) 100%);">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-kicker">Crónicas &amp; Actualidad</span>
+        <h2 class="section-title">Editorial &amp; Club News</h2>
+        <p class="section-description">
+          In-depth tactical analysis, post-match reports, Bernabéu transformations, and reports from Ciudad Real Madrid in Valdebebas.
+        </p>
+      </header>
+
+      <!-- Category Filter -->
+      <div class="filter-bar">
+        <button class="filter-btn news-filter-btn active" data-filter="all">All Stories</button>
+        <button class="filter-btn news-filter-btn" data-filter="match report">Match Reports</button>
+        <button class="filter-btn news-filter-btn" data-filter="club news">Club News</button>
+        <button class="filter-btn news-filter-btn" data-filter="tactical">Tactical Analysis</button>
+        <button class="filter-btn news-filter-btn" data-filter="fábrica">La Fábrica</button>
+      </div>
+
+      <div class="news-grid" id="news-grid">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       11. PHOTO GALLERY (ARCHIVO FOTOGRÁFICO)
+       ======================================================================== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-kicker">Archivo Fotográfico</span>
+        <h2 class="section-title">The Visual Legacy</h2>
+        <p class="section-description">
+          High-definition imagery capturing European finals, Bernabéu celebrations at Cibeles, and iconic moments etched into football folklore.
+        </p>
+      </header>
+
+      <!-- Gallery Filter -->
+      <div class="filter-bar">
+        <button class="filter-btn gallery-filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="matchday">Matchday</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="stadium">Bernabéu</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="celebrations">Celebrations</button>
+        <button class="filter-btn gallery-filter-btn" data-filter="historic">Historic</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered dynamically by components.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       12. GLOBAL FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <img src="assets/images/real-madrid-crest.svg" alt="Real Madrid CF Crest" class="footer-crest">
+          <h3 class="footer-motto">"¡Hala Madrid! ...y nada más"</h3>
+          <p class="footer-desc">
+            The world's most successful football club. Fifteen-time champions of Europe, thirty-six times champions of Spain, and proud beacon of sporting excellence since 1902.
+          </p>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col">
+          <h4>Club Navigation</h4>
+          <ul class="footer-nav-links">
+            <li><a href="#first-team">First Team Squad</a></li>
+            <li><a href="#matches">Fixtures &amp; Results</a></li>
+            <li><a href="#trophies">Sala de Trofeos</a></li>
+            <li><a href="#history">Club History (1902–2024)</a></li>
+            <li><a href="#legends">Leyendas Blancas</a></li>
+            <li><a href="#stadium">Santiago Bernabéu</a></li>
+          </ul>
+        </div>
+
+        <!-- Institutional Links -->
+        <div class="footer-col">
+          <h4>Matchday &amp; Arena</h4>
+          <ul class="footer-nav-links">
+            <li><a href="#stadium" onclick="window.notifyToast('Bernabéu Tour & Museum portal')">Tour Bernabéu</a></li>
+            <li><a href="#matches" onclick="window.notifyToast('VIP Hospitality booking')">VIP Corporate Hospitality</a></li>
+            <li><a href="#matches" onclick="window.notifyToast('Ticket availability check')">Matchday Tickets</a></li>
+            <li><a href="#news">Ciudad Real Madrid (Valdebebas)</a></li>
+            <li><a href="#hero">Real Madrid Foundation</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col">
+          <h4>Madridista Mailings</h4>
+          <p style="font-size: 0.9rem; color: var(--color-slate-400);">
+            Receive official starting line-ups, exclusive Bernabéu matchday photography, and breaking club announcements.
+          </p>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address for newsletter">
+              <button type="submit" class="newsletter-submit-btn">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Legal / Portfolio Disclaimer -->
+      <div class="footer-disclaimer-bar">
+        <p class="disclaimer-text">
+          <strong>Fan-Made Portfolio Project:</strong> This website is an unofficial tribute and technical showcase created for portfolio and design purposes. The Real Madrid C.F. name, crest, and associated marks are registered trademarks of Real Madrid Club de Fútbol. All official club business, match tickets, and club services should be accessed via <a href="https://www.realmadrid.com" target="_blank" rel="noopener noreferrer" style="color: var(--color-gold); text-decoration: underline;">realmadrid.com</a>.
+        </p>
+        <p style="font-size: 0.85rem; color: var(--color-slate-400);">
+          &copy; 2024–2026 Real Madrid Fan Platform • Architectural &amp; Sports Art Direction.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL DIALOGS
+       ======================================================================== -->
+
+  <!-- Player Dossier Modal -->
+  <div class="modal-backdrop" id="player-modal" role="dialog" aria-modal="true" aria-label="Player Profile Dossier">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Player Dossier">&times;</button>
+      <div id="player-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Match Detail Modal -->
+  <div class="modal-backdrop" id="match-modal" role="dialog" aria-modal="true" aria-label="Match Report & Lineup Details">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Match Details">&times;</button>
+      <div id="match-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Trophy Detail Modal -->
+  <div class="modal-backdrop" id="trophy-modal" role="dialog" aria-modal="true" aria-label="Trophy Victory History">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Trophy Dossier">&times;</button>
+      <div id="trophy-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Legend Detail Modal -->
+  <div class="modal-backdrop" id="legend-modal" role="dialog" aria-modal="true" aria-label="Legend Profile Dossier">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Legend Profile">&times;</button>
+      <div id="legend-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- News Article Reader Modal -->
+  <div class="modal-backdrop" id="news-modal" role="dialog" aria-modal="true" aria-label="Editorial Article Reader">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Article Reader">&times;</button>
+      <div id="news-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="lightbox-container">
+      <button class="modal-close-btn" aria-label="Close Photo Lightbox">&times;</button>
+      <div class="lightbox-img-wrapper">
+        <button class="lightbox-arrow prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        <img src="" alt="" id="lightbox-img">
+        <button class="lightbox-arrow next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+      </div>
+      <div class="lightbox-caption-bar">
+        <span class="lightbox-tag" id="lightbox-tag"></span>
+        <h3 class="lightbox-title" id="lightbox-title"></h3>
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- External GSAP & ScrollTrigger Libraries (CDN with graceful fallback) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

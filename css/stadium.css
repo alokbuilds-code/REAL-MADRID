@@ -1,0 +1,198 @@
+/* ==========================================================================
+   REAL MADRID CF — EL NUEVO SANTIAGO BERNABÉU STYLES
+   Architectural schematic, interactive hypogeum & stadium tech explorer
+   ========================================================================== */
+
+.stadium-section {
+  background: linear-gradient(180deg, var(--color-navy-midnight) 0%, #030E22 50%, var(--color-navy-midnight) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.stadium-blueprint-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Schematic Visual Container */
+.schematic-viewport {
+  position: relative;
+  background: #040D1D;
+  border: 1px solid var(--color-navy-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.schematic-viewport img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.schematic-corner-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  background: rgba(2, 8, 19, 0.85);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-navy-border);
+  letter-spacing: 1px;
+}
+
+/* Stadium Tech Selector */
+.stadium-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.stadium-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.15rem 1.5rem;
+  background: var(--color-navy-card);
+  border: 1px solid var(--color-navy-border-subtle);
+  border-radius: 6px;
+  text-align: left;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.stadium-feat-item:hover {
+  border-color: var(--color-gold);
+  background: var(--color-navy-surface);
+}
+
+.stadium-feat-item.active {
+  border-color: var(--color-gold);
+  background: linear-gradient(90deg, rgba(200, 164, 77, 0.15) 0%, var(--color-navy-surface) 100%);
+  box-shadow: 0 4px 20px rgba(200, 164, 77, 0.2);
+}
+
+.feat-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--color-gold);
+  min-width: 32px;
+}
+
+.feat-content h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.feat-arrow {
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: var(--color-slate-400);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.stadium-feat-item.active .feat-arrow {
+  color: var(--color-gold-light);
+  transform: translateX(4px);
+}
+
+/* Feature Details Card */
+.stadium-feature-details {
+  min-height: 200px;
+}
+
+.feature-active-card {
+  background: rgba(2, 8, 19, 0.7);
+  border: 1px solid var(--color-navy-border);
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+}
+
+.feature-tech-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.feature-title {
+  font-size: 1.8rem;
+  color: var(--color-white);
+  margin-bottom: 0.85rem;
+}
+
+.feature-description {
+  font-size: 1.05rem;
+  color: var(--color-slate-300);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.feature-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.spec-pill {
+  background: var(--color-navy-surface);
+  border: 1px solid var(--color-navy-border-subtle);
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-pill .lbl {
+  font-size: 0.65rem;
+  color: var(--color-slate-400);
+  letter-spacing: 1px;
+}
+
+.spec-pill .val {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-gold-light);
+}
+
+/* Bernabéu Tour Experience CTA Banner */
+.stadium-tour-banner {
+  margin-top: 4.5rem;
+  background: linear-gradient(135deg, rgba(11, 34, 71, 0.8) 0%, rgba(2, 8, 19, 0.95) 100%),
+              url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&q=80') center/cover;
+  border: 1px solid var(--color-navy-border);
+  border-radius: 12px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--shadow-deep);
+}
+
+.tour-banner-content h3 {
+  font-size: 2.4rem;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.tour-banner-content p {
+  font-size: 1.1rem;
+  color: var(--color-slate-300);
+  max-width: 620px;
+}

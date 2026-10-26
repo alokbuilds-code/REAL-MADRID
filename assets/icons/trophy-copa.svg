@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="copaSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#E2E8F0"/>
+      <stop offset="70%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="copaWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3E2723"/>
+      <stop offset="50%" stop-color="#5D4037"/>
+      <stop offset="100%" stop-color="#2D1810"/>
+    </linearGradient>
+    <linearGradient id="goldAccCopa" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FCE08B"/>
+      <stop offset="100%" stop-color="#C8A44D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Tall Mahogany Wood Base -->
+  <rect x="58" y="180" width="84" height="48" rx="4" fill="url(#copaWood)" stroke="#1A0E0A" stroke-width="2"/>
+  <rect x="52" y="224" width="96" height="8" rx="2" fill="#1A0E0A"/>
+  
+  <!-- Engraved plaque on base -->
+  <rect x="70" y="195" width="60" height="22" rx="2" fill="url(#goldAccCopa)" stroke="#6C4D0A" stroke-width="1"/>
+  <text x="100" y="206" fill="#1A0E0A" font-family="'Arial Black', sans-serif" font-size="7" text-anchor="middle" font-weight="900">COPA DEL REY</text>
+  <text x="100" y="214" fill="#071A36" font-family="'Arial Black', sans-serif" font-size="7" text-anchor="middle" font-weight="900">20 TITLES</text>
+
+  <!-- Cup Stem & Bowl -->
+  <path d="M 90 180 L 92 140 L 108 140 L 110 180 Z" fill="url(#copaSilver)" stroke="#334155" stroke-width="1.5"/>
+  <ellipse cx="100" cy="140" rx="14" ry="4" fill="#64748B"/>
+
+  <!-- Elegant Deep Goblet -->
+  <path d="M 68 65 C 68 115 84 140 100 140 C 116 140 132 115 132 65 Z" fill="url(#copaSilver)" stroke="#334155" stroke-width="2"/>
+  <ellipse cx="100" cy="65" rx="32" ry="7" fill="#CBD5E1" stroke="#334155" stroke-width="1.5"/>
+  <ellipse cx="100" cy="64" rx="29" ry="5" fill="#1E293B"/>
+
+  <!-- Two delicate curved handles -->
+  <path d="M 72 75 C 50 85 50 115 76 122" fill="none" stroke="url(#copaSilver)" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 128 75 C 150 85 150 115 124 122" fill="none" stroke="url(#copaSilver)" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Royal Spanish Crown on Cup Face -->
+  <path d="M 92 95 L 90 85 L 96 90 L 100 82 L 104 90 L 110 85 L 108 95 Z" fill="url(#goldAccCopa)" stroke="#6C4D0A" stroke-width="0.8"/>
+  <circle cx="100" cy="80" r="1.5" fill="url(#goldAccCopa)"/>
+</svg>

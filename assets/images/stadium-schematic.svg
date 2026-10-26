@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#071A36"/>
+      <stop offset="50%" stop-color="#0D254C"/>
+      <stop offset="100%" stop-color="#020914"/>
+    </linearGradient>
+    <linearGradient id="steelGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C8A44D" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="pitchGrass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803D"/>
+      <stop offset="50%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="undergroundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#091424"/>
+      <stop offset="100%" stop-color="#03070E"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.8" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Dark Architectural Background -->
+  <rect x="0" y="0" width="900" height="520" fill="url(#skyGrad)"/>
+  <rect x="0" y="0" width="900" height="520" fill="url(#gridPattern)"/>
+
+  <!-- Architectural Title & Legend -->
+  <text x="40" y="42" fill="#C8A44D" font-family="'Barlow Condensed', 'Oswald', sans-serif" font-size="14" letter-spacing="3" font-weight="700">ARCHITECTURAL SCHEMATIC // 2024</text>
+  <text x="40" y="70" fill="#FFFFFF" font-family="'Barlow Condensed', 'Oswald', sans-serif" font-size="28" font-weight="800" letter-spacing="1">EL NUEVO SANTIAGO BERNABÉU</text>
+  <text x="40" y="90" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">CAPACITY: 84,700 SEATS • HYPOGEUM PITCH ELEVATION • 360° HALO DISPLAY</text>
+
+  <!-- Coordinates & Technical Marks -->
+  <text x="760" y="42" fill="#64748B" font-family="monospace" font-size="11">40°27'11"N 3°41'18"W</text>
+  <text x="760" y="58" fill="#64748B" font-family="monospace" font-size="11">ALT: 708M MADRID</text>
+
+  <!-- Ground Level Line (Paseo de la Castellana) -->
+  <line x1="40" y1="310" x2="860" y2="310" stroke="#334155" stroke-dasharray="6,4" stroke-width="1.5"/>
+  <text x="860" y="304" fill="#64748B" font-family="monospace" font-size="10" text-anchor="end">±0.00m GROUND LEVEL (CASTELLANA)</text>
+
+  <!-- STADIUM ENVELOPE / METALLIC LOUVERED CURVE -->
+  <!-- Outer Shell Silhouette -->
+  <path d="M 120 310 C 100 240 130 140 220 110 C 350 75 550 75 680 110 C 770 140 800 240 780 310 Z" 
+        fill="#0A182F" stroke="url(#steelGlow)" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- Louvered Blade Lines (Parametric Facade) -->
+  <path d="M 140 300 C 130 230 160 150 240 125 C 360 95 540 95 660 125 C 740 150 770 230 760 300" fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.4"/>
+  <path d="M 160 290 C 150 220 180 160 260 140 C 370 115 530 115 640 140 C 720 160 750 220 740 290" fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.3"/>
+  <path d="M 180 280 C 175 220 200 170 280 155 C 380 135 520 135 620 155 C 700 170 725 220 720 280" fill="none" stroke="#C8A44D" stroke-width="1" opacity="0.35"/>
+
+  <!-- RETRACTABLE ROOF SYSTEM (Cables and motorized spans) -->
+  <line x1="280" y1="100" x2="620" y2="100" stroke="#FCE08B" stroke-width="3" stroke-linecap="round"/>
+  <rect x="290" y="94" width="140" height="12" rx="2" fill="#E2E8F0" stroke="#0F172A" stroke-width="1"/>
+  <rect x="470" y="94" width="140" height="12" rx="2" fill="#E2E8F0" stroke="#0F172A" stroke-width="1"/>
+  <circle cx="280" cy="100" r="4" fill="#C8A44D"/>
+  <circle cx="620" cy="100" r="4" fill="#C8A44D"/>
+  <!-- Roof callout -->
+  <line x1="450" y1="94" x2="450" y2="60" stroke="#C8A44D" stroke-width="1"/>
+  <circle cx="450" cy="58" r="3" fill="#C8A44D"/>
+  <text x="450" y="50" fill="#FCE08B" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">MOTORIZED RETRACTABLE ROOF (15 MIN DEPLOYMENT)</text>
+
+  <!-- 360° HALO VIDEO BOARD (Suspended Center Ring) -->
+  <ellipse cx="450" cy="175" rx="190" ry="24" fill="none" stroke="#0284C7" stroke-width="12" opacity="0.85"/>
+  <ellipse cx="450" cy="175" rx="190" ry="24" fill="none" stroke="#38BDF8" stroke-width="3"/>
+  <ellipse cx="450" cy="175" rx="180" ry="20" fill="none" stroke="#FFFFFF" stroke-dasharray="8,6" stroke-width="1.5"/>
+  <text x="450" y="180" fill="#FFFFFF" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="3">360° CONTINUOUS HALO LED SCOREBOARD</text>
+
+  <!-- SEATING TIERS (Gradas Norte, Sur, Este, Oeste) -->
+  <!-- Upper Deck Left & Right -->
+  <polygon points="170,270 260,200 290,200 200,270" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <polygon points="730,270 640,200 610,200 700,270" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  
+  <!-- Middle Tier -->
+  <polygon points="205,275 285,215 310,215 230,275" fill="#334155" stroke="#64748B" stroke-width="1"/>
+  <polygon points="695,275 615,215 590,215 670,275" fill="#334155" stroke="#64748B" stroke-width="1"/>
+
+  <!-- VIP Box Tier (Skyboxes) -->
+  <rect x="235" y="222" width="70" height="12" fill="#C8A44D" opacity="0.8"/>
+  <rect x="595" y="222" width="70" height="12" fill="#C8A44D" opacity="0.8"/>
+  <text x="270" y="231" fill="#071A36" font-family="'Inter', sans-serif" font-size="7" font-weight="800" text-anchor="middle">VIP SUITES</text>
+  <text x="630" y="231" fill="#071A36" font-family="'Inter', sans-serif" font-size="7" font-weight="800" text-anchor="middle">VIP SUITES</text>
+
+  <!-- Lower Bowl Seats -->
+  <polygon points="240,305 320,250 340,250 260,305" fill="#182E63" stroke="#38BDF8" stroke-width="1"/>
+  <polygon points="660,305 580,250 560,250 640,305" fill="#182E63" stroke="#38BDF8" stroke-width="1"/>
+
+  <!-- MAIN MATCHDAY PITCH (At Ground Level) -->
+  <rect x="270" y="300" width="360" height="10" rx="2" fill="url(#pitchGrass)" stroke="#4ADE80" stroke-width="1"/>
+  <!-- Pitch Markings -->
+  <line x1="450" y1="300" x2="450" y2="310" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="450" cy="305" r="14" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+
+  <!-- HYPOGEUM SUBTERRANEAN CAVERN (The 30-meter underground greenhouse) -->
+  <rect x="260" y="325" width="380" height="160" rx="4" fill="url(#undergroundGrad)" stroke="#1E293B" stroke-width="2"/>
+  <rect x="265" y="330" width="370" height="150" fill="none" stroke="#334155" stroke-dasharray="4,4" stroke-width="1"/>
+
+  <text x="450" y="348" fill="#C8A44D" font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1">SUBTERRANEAN HYPOGEUM GREENHOUSE (-30 METERS)</text>
+
+  <!-- 6 Automated Pitch Trays stacked vertically inside subterranean cave -->
+  <!-- Pitch Tray 1 -->
+  <rect x="290" y="360" width="320" height="12" rx="2" fill="url(#pitchGrass)" stroke="#C8A44D" stroke-width="1"/>
+  <!-- Pitch Tray 2 -->
+  <rect x="290" y="380" width="320" height="12" rx="2" fill="url(#pitchGrass)" opacity="0.9"/>
+  <!-- Pitch Tray 3 -->
+  <rect x="290" y="400" width="320" height="12" rx="2" fill="url(#pitchGrass)" opacity="0.8"/>
+  <!-- Pitch Tray 4 -->
+  <rect x="290" y="420" width="320" height="12" rx="2" fill="url(#pitchGrass)" opacity="0.7"/>
+  <!-- Pitch Tray 5 -->
+  <rect x="290" y="440" width="320" height="12" rx="2" fill="url(#pitchGrass)" opacity="0.6"/>
+  <!-- Pitch Tray 6 -->
+  <rect x="290" y="460" width="320" height="12" rx="2" fill="url(#pitchGrass)" opacity="0.5"/>
+
+  <!-- Elevators & Hydraulic Lift Tracks on sides -->
+  <line x1="280" y1="310" x2="280" y2="480" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="5,2"/>
+  <line x1="620" y1="310" x2="620" y2="480" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="5,2"/>
+
+  <!-- UV Lighting & Climate System indicators -->
+  <circle cx="310" cy="355" r="2" fill="#EAB308"/>
+  <circle cx="350" cy="355" r="2" fill="#EAB308"/>
+  <circle cx="390" cy="355" r="2" fill="#EAB308"/>
+  <circle cx="430" cy="355" r="2" fill="#EAB308"/>
+  <circle cx="470" cy="355" r="2" fill="#EAB308"/>
+  <circle cx="510" cy="355" r="2" fill="#EAB308"/>
+  <circle cx="550" cy="355" r="2" fill="#EAB308"/>
+  <circle cx="590" cy="355" r="2" fill="#EAB308"/>
+
+  <!-- Callout lines -->
+  <!-- Pitch Elevator Callout -->
+  <line x1="280" y1="420" x2="160" y2="420" stroke="#38BDF8" stroke-width="1"/>
+  <circle cx="160" cy="420" r="3" fill="#38BDF8"/>
+  <text x="150" y="416" fill="#38BDF8" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="end">HYDRAULIC PITCH LIFTS</text>
+  <text x="150" y="430" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9" text-anchor="end">Transports 6 segmented grass modules</text>
+
+  <!-- Agronomic Care Callout -->
+  <line x1="620" y1="420" x2="740" y2="420" stroke="#4ADE80" stroke-width="1"/>
+  <circle cx="740" cy="420" r="3" fill="#4ADE80"/>
+  <text x="750" y="416" fill="#4ADE80" font-family="'Inter', sans-serif" font-size="11" font-weight="700">AGRONOMIC CAVERN</text>
+  <text x="750" y="430" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9">Automated LED UV, irrigation &amp; humidity control</text>
+
+  <!-- Multipurpose Arena Mode Badge -->
+  <rect x="40" y="465" width="200" height="28" rx="4" fill="#071A36" stroke="#C8A44D" stroke-width="1"/>
+  <text x="140" y="483" fill="#FCE08B" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" text-anchor="middle">MULTIPURPOSE CONFIGURATION</text>
+</svg>

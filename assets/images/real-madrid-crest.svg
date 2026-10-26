@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE08B"/>
+      <stop offset="35%" stop-color="#C8A44D"/>
+      <stop offset="70%" stop-color="#E8C86A"/>
+      <stop offset="100%" stop-color="#9C7927"/>
+    </linearGradient>
+    <linearGradient id="royalBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#214287"/>
+      <stop offset="50%" stop-color="#182E63"/>
+      <stop offset="100%" stop-color="#0E1A38"/>
+    </linearGradient>
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D7282F"/>
+      <stop offset="100%" stop-color="#8B1116"/>
+    </linearGradient>
+    <filter id="royalShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Group with shadow -->
+  <g filter="url(#royalShadow)">
+    <!-- CIRCULAR BADGE -->
+    <!-- Outer Gold Ring -->
+    <circle cx="250" cy="305" r="150" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="22"/>
+    <!-- Inner Fine Gold Ring -->
+    <circle cx="250" cy="305" r="128" fill="none" stroke="url(#goldGrad)" stroke-width="5"/>
+
+    <!-- Purple/Blue Diagonal Sash (Band of Castile) -->
+    <g clip-path="url(#circleClip)">
+      <clipPath id="circleClip">
+        <circle cx="250" cy="305" r="125"/>
+      </clipPath>
+      <rect x="70" y="270" width="360" height="70" fill="url(#royalBlueGrad)" transform="rotate(-45 250 305)"/>
+    </g>
+
+    <!-- Intertwined Monogram: M, C, F in Royal Gold -->
+    <!-- Large M -->
+    <path d="M 175 375 L 175 235 L 210 235 L 250 310 L 290 235 L 325 235 L 325 375 L 295 375 L 295 285 L 262 345 L 238 345 L 205 285 L 205 375 Z" 
+          fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="3" stroke-linejoin="round"/>
+    
+    <!-- Outer C wrapping around -->
+    <path d="M 330 250 C 375 290 365 355 315 385 C 270 410 215 400 180 375 C 160 360 170 345 185 355 C 215 375 260 380 295 360 C 330 338 335 290 305 260 C 295 250 310 235 330 250 Z" 
+          fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="2.5"/>
+
+    <!-- Inner F -->
+    <path d="M 235 245 L 285 245 L 285 265 L 255 265 L 255 290 L 280 290 L 280 310 L 255 310 L 255 365 L 235 365 Z" 
+          fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="2"/>
+
+    <!-- ROYAL CROWN (Corona Real - granted by King Alfonso XIII in 1920) -->
+    <!-- Crown Red Cushion / Lining -->
+    <path d="M 160 180 C 160 110 340 110 340 180 Z" fill="url(#crimsonGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
+    
+    <!-- Crown Diadem Base -->
+    <path d="M 140 185 C 140 170 360 170 360 185 L 355 200 C 355 210 145 210 145 200 Z" fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="2"/>
+    
+    <!-- Base Jewels -->
+    <circle cx="170" cy="192" r="5" fill="#182E63"/>
+    <circle cx="210" cy="192" r="6" fill="#FFFFFF"/>
+    <circle cx="250" cy="192" r="7" fill="#D7282F"/>
+    <circle cx="290" cy="192" r="6" fill="#FFFFFF"/>
+    <circle cx="330" cy="192" r="5" fill="#182E63"/>
+
+    <!-- Crown Arches & Acanthus Leaves -->
+    <!-- Center Leaf -->
+    <path d="M 230 175 C 230 140 250 120 250 120 C 250 120 270 140 270 175 Z" fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="2"/>
+    <!-- Left Inner Arch -->
+    <path d="M 195 180 C 190 145 220 125 240 122" fill="none" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Right Inner Arch -->
+    <path d="M 305 180 C 310 145 280 125 260 122" fill="none" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Left Outer Leaf -->
+    <path d="M 150 182 C 145 155 175 145 185 160 C 190 167 185 180 185 180" fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="2"/>
+    <!-- Right Outer Leaf -->
+    <path d="M 350 182 C 355 155 325 145 315 160 C 310 167 315 180 315 180" fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="2"/>
+
+    <!-- Pearl Pearls on Arches -->
+    <circle cx="175" cy="155" r="4.5" fill="#FFFFFF" stroke="#C8A44D" stroke-width="1.5"/>
+    <circle cx="205" cy="138" r="4.5" fill="#FFFFFF" stroke="#C8A44D" stroke-width="1.5"/>
+    <circle cx="228" cy="126" r="4.5" fill="#FFFFFF" stroke="#C8A44D" stroke-width="1.5"/>
+    <circle cx="272" cy="126" r="4.5" fill="#FFFFFF" stroke="#C8A44D" stroke-width="1.5"/>
+    <circle cx="295" cy="138" r="4.5" fill="#FFFFFF" stroke="#C8A44D" stroke-width="1.5"/>
+    <circle cx="325" cy="155" r="4.5" fill="#FFFFFF" stroke="#C8A44D" stroke-width="1.5"/>
+
+    <!-- Top Orb (Globus Cruciger) -->
+    <circle cx="250" cy="108" r="10" fill="url(#goldGrad)" stroke="#6C4D0A" stroke-width="2"/>
+    <line x1="243" y1="108" x2="257" y2="108" stroke="#6C4D0A" stroke-width="2.5"/>
+    <!-- Top Royal Cross -->
+    <path d="M 250 82 L 250 102 M 241 89 L 259 89" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 250 82 L 250 102 M 241 89 L 259 89" stroke="#6C4D0A" stroke-width="1.5" stroke-linecap="square"/>
+  </g>
+</svg>
