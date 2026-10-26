@@ -20,7 +20,6 @@
   <a href="#-architecture-and-preview">Preview</a> •
   <a href="#-technology-stack">Tech Stack</a> •
   <a href="#-project-structure">Project Structure</a> •
-  <a href="#-prerequisites-and-installation">Installation</a> •
   <a href="#-local-development-and-usage">Usage</a> •
   <a href="#-testing-and-troubleshooting">Testing</a> •
   <a href="#-license--disclaimer">License</a>
@@ -195,68 +194,7 @@ This repository houses a complete, high-fidelity football web platform dedicated
 
 ---
 
-## ⚙️ Prerequisites and Installation
-
-### Prerequisites
-
-Because this project is built entirely on native web standards with zero package managers or build steps required, no Node.js, npm, yarn, or Python installations are strictly mandatory. All you need is any modern web browser.
-
-- **Recommended Browsers:** Google Chrome (88+), Mozilla Firefox (85+), Apple Safari (14+), or Microsoft Edge (88+).
-
-### Installation
-
-Clone the repository locally:
-
-```bash
-git clone https://github.com/your-username/real-madrid-cf-platform.git
-cd real-madrid-cf-platform
-```
-
----
-
-## 💻 Local Development and Usage
-
-You can run and inspect the website locally using any of the following methods:
-
-### Method 1: Python HTTP Server (Zero Setup)
-
-If you have Python installed on your system:
-
-```bash
-# Python 3
-python -m http.server 8080
-```
-
-Then navigate to:
-```
-http://localhost:8080
-```
-
-### Method 2: Node.js Static Server
-
-Using `npx` with any standard static server tool:
-
-```bash
-# Using 'serve'
-npx serve . -p 8080
-
-# Or using 'http-server'
-npx http-server -p 8080
-```
-
-### Method 3: Direct Browser Launch
-
-You can open `index.html` directly in your default browser:
-
-- **Windows:** Double-click `index.html` or run `Start-Process index.html` in PowerShell.
-- **macOS:** Run `open index.html` in Terminal.
-- **Linux:** Run `xdg-open index.html` in Terminal.
-
----
-
-## 🌐 Deployment Instructions
-
-The static architecture makes deployment instantaneous across all major static hosting platforms.
+https://madrid-inky.vercel.app/
 
 ### 1. GitHub Pages
 1. Push your repository to GitHub.
